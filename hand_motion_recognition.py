@@ -1,3 +1,5 @@
+#이 파일 사용 안함
+
 import tensorflow.keras
 import numpy as np
 import cv2
