@@ -1,0 +1,113 @@
+from PyQt5 import QtCore, QtGui, QtWidgets
+from test3 import Ui_thirdWindow
+from test1 import *
+
+class Ui_OtherWindow(object):
+    def __init__(self,a,b):
+        self.a = a
+        self.b = b
+
+    def setupUi(self, OtherWindow):
+        def __init__(self):
+            self.a = '안녕하세요'
+
+        OtherWindow.setObjectName("OtherWindow")
+        OtherWindow.resize(800, 543)
+        self.centralwidget = QtWidgets.QWidget(OtherWindow)
+        self.centralwidget.setObjectName("centralwidget")
+        self.orderis = QtWidgets.QLabel(self.centralwidget)
+        self.orderis.setGeometry(QtCore.QRect(81, 88, 611, 71))
+        font = QtGui.QFont()
+        font.setFamily("타이포_쌍문동 B")
+        font.setPointSize(16)
+        font.setBold(True)
+        font.setUnderline(True)
+        font.setWeight(75)
+        self.orderis.setFont(font)
+        self.orderis.setStyleSheet("")
+        self.orderis.setAlignment(QtCore.Qt.AlignCenter)
+        self.orderis.setObjectName("orderis")
+        self.result = QtWidgets.QLabel(self.centralwidget)
+        self.result.setGeometry(QtCore.QRect(403, 319, 281, 71))
+        font = QtGui.QFont()
+        font.setFamily("타이포_쌍문동 B")
+        font.setPointSize(16)
+        font.setBold(True)
+        font.setUnderline(True)
+        font.setWeight(75)
+        self.result.setFont(font)
+        self.result.setAlignment(QtCore.Qt.AlignCenter)
+        self.result.setObjectName("result")
+        self.label = QtWidgets.QLabel(self.centralwidget)
+        self.label.setGeometry(QtCore.QRect(629, 175, 81, 101))
+        self.label.setStyleSheet("background-image: url(:/newPrefix/image.PNG);")
+        self.label.setText("")
+        self.label.setPixmap(QtGui.QPixmap(":/newPrefix/image.PNG"))
+        self.label.setScaledContents(True)
+        self.label.setObjectName("label")
+        self.money = QtWidgets.QLabel(self.centralwidget)
+        self.money.setGeometry(QtCore.QRect(77, 305, 251, 101))
+        font = QtGui.QFont()
+        font.setFamily("타이포_쌍문동 B")
+        font.setPointSize(16)
+        font.setBold(True)
+        font.setUnderline(True)
+        font.setWeight(75)
+        self.money.setFont(font)
+        self.money.setAlignment(QtCore.Qt.AlignCenter)
+        self.money.setObjectName("money")
+        self.ok = QtWidgets.QLabel(self.centralwidget)
+        self.ok.setGeometry(QtCore.QRect(192, 375, 411, 51))
+        font = QtGui.QFont()
+        font.setFamily("타이포_쌍문동 B")
+        font.setPointSize(10)
+        font.setBold(False)
+        font.setUnderline(False)
+        font.setWeight(50)
+        self.ok.setFont(font)
+        self.ok.setStyleSheet("color: rgb(170, 0, 127);")
+        self.ok.setAlignment(QtCore.Qt.AlignCenter)
+        self.ok.setObjectName("ok")
+        self.label_2 = QtWidgets.QLabel(self.centralwidget)
+        self.label_2.setGeometry(QtCore.QRect(160, 399, 471, 61))
+        font = QtGui.QFont()
+        font.setFamily("타이포_쌍문동 B")
+        font.setPointSize(10)
+        font.setBold(False)
+        font.setUnderline(False)
+        font.setWeight(50)
+        self.label_2.setFont(font)
+        self.label_2.setStyleSheet("color: rgb(170, 0, 127);\n"
+"color: rgb(170, 0, 127);")
+        self.label_2.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_2.setObjectName("label_2")
+        self.text1 = QtWidgets.QPlainTextEdit(self.centralwidget)
+        self.text1.setGeometry(QtCore.QRect(231, 168, 311, 131))
+        self.text1.setObjectName("text1")
+        self.plainTextEdit_3 = QtWidgets.QPlainTextEdit(self.centralwidget)
+        self.plainTextEdit_3.setGeometry(QtCore.QRect(291, 338, 101, 31))
+        self.plainTextEdit_3.setObjectName("plainTextEdit_3")
+        OtherWindow.setCentralWidget(self.centralwidget)
+
+        self.retranslateUi(OtherWindow)
+        QtCore.QMetaObject.connectSlotsByName(OtherWindow)
+
+    def retranslateUi(self, OtherWindow):
+        _translate = QtCore.QCoreApplication.translate
+        OtherWindow.setWindowTitle(_translate("OtherWindow", "MainWindow"))
+        self.orderis.setText(_translate("OtherWindow", "고객님께서 주문하신 음료는 "))
+        self.result.setText(_translate("OtherWindow", "원 입니다. 맞으신가요?"))
+        self.money.setText(_translate("OtherWindow", "총 금액은 "))
+        self.ok.setText(_translate("OtherWindow", "맞으면 손가락으로 오케이 동작을,"))
+        self.label_2.setText(_translate("OtherWindow", "아니면 주먹 동작을 해주세요!"))
+        self.text1.setPlainText(_translate("OtherWindow", self.a))
+        self.plainTextEdit_3.setPlainText(_translate("OtherWindow", self.b))
+
+if __name__ == "__main__":
+    import sys
+    app = QtWidgets.QApplication(sys.argv)
+    OtherWindow = QtWidgets.QMainWindow()
+    ui = Ui_OtherWindow()
+    ui.setupUi(OtherWindow)
+    OtherWindow.show()
+    sys.exit(app.exec_())
